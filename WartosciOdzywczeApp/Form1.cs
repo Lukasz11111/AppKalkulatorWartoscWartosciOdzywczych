@@ -14,13 +14,17 @@ namespace WartosciOdzywczeApp
 {
 	public partial class Form1 : Form
 	{
+        Teksty statyczneTeksty = new Teksty();
 		public Form1()
 		{
 			InitializeComponent();
-            test();
+            label1.Text = statyczneTeksty.label_o_programie();
+            
+
 
 
         }
+        
 
         private void test()
         {
@@ -42,5 +46,10 @@ namespace WartosciOdzywczeApp
 		{
 
 		}
-	}
+
+        private void wprowadzProduktToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

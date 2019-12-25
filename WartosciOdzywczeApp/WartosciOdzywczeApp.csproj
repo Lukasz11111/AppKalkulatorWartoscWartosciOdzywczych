@@ -64,6 +64,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatyczneTeksty.cs" />
+    <Compile Include="StronaDruga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StronaDruga.Designer.cs">
+      <DependentUpon>StronaDruga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zapytania_sqlit.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
