@@ -18,3 +18,4 @@ C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\obj\Debug\W
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\SQLite.Designer.dll
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\System.Data.SQLite.dll
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\obj\Debug\WartosciOdzywczeApp.Przelicz.resources

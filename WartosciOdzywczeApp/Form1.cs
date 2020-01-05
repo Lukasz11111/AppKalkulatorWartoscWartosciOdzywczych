@@ -62,5 +62,15 @@ namespace WartosciOdzywczeApp
         {
 
         }
+
+        private void przeliczToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Przelicz przelicz = new Przelicz();
+            przelicz.Location = this.Location;
+            przelicz.StartPosition = FormStartPosition.Manual;
+            przelicz.FormClosing += delegate { this.Show(); };
+            przelicz.Show();
+            this.Hide();
+        }
     }
 }

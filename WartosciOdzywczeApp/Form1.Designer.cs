@@ -67,6 +67,7 @@
             this.przeliczToolStripMenuItem.Name = "przeliczToolStripMenuItem";
             this.przeliczToolStripMenuItem.Size = new System.Drawing.Size(233, 29);
             this.przeliczToolStripMenuItem.Text = "Przelicz";
+            this.przeliczToolStripMenuItem.Click += new System.EventHandler(this.przeliczToolStripMenuItem_Click);
             // 
             // label1
             // 
