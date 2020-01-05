@@ -15,7 +15,8 @@ namespace WartosciOdzywczeApp
 	public partial class Form1 : Form
 	{
         Teksty statyczneTeksty = new Teksty();
-		public Form1()
+        
+        public Form1()
 		{
 			InitializeComponent();
             label1.Text = statyczneTeksty.label_o_programie();
@@ -48,6 +49,16 @@ namespace WartosciOdzywczeApp
 		}
 
         private void wprowadzProduktToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StronaDruga stronaDruga = new StronaDruga();
+            stronaDruga.Location = this.Location;
+            stronaDruga.StartPosition = FormStartPosition.Manual;
+            stronaDruga.FormClosing += delegate { this.Show(); }; 
+            stronaDruga.Show();
+            this.Hide();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

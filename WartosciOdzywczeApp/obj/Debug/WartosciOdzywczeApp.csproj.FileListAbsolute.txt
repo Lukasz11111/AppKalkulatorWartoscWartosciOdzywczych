@@ -9,11 +9,12 @@ C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\obj\Debug\W
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\obj\Debug\WartosciOdzywczeApp.exe
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\obj\Debug\WartosciOdzywczeApp.pdb
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\obj\Debug\WartosciOdzywczeApp.csproj.CopyComplete
-C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\SQLite.Designer.dll
-C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\System.Data.SQLite.dll
-C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\EnvDTE.dll
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
 C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\stdole.dll
+C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\obj\Debug\WartosciOdzywczeApp.StronaDruga.resources
+C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\SQLite.Designer.dll
+C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\Lenovo\source\repos\WartosciOdzywczeApp\WartosciOdzywczeApp\bin\Debug\System.Data.SQLite.Linq.dll

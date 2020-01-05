@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace WartosciOdzywczeApp
 {
@@ -15,6 +16,41 @@ namespace WartosciOdzywczeApp
         public StronaDruga()
         {
             InitializeComponent();
+        }
+
+        public void wprowadzProduktToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void StronaDruga_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StronaDruga_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float weglo, bialka, tluszcze, blonik;
+            float.TryParse(textBoxWeglo.Text, out weglo);
+            float.TryParse(textBoxBialka.Text, out bialka);
+            float.TryParse(textBoxTluszcze.Text, out tluszcze);
+            float.TryParse(textBoxBlonik.Text, out blonik);
+            Produkt produkt = new Produkt(textBoxNazwa.Text, weglo, bialka, tluszcze, blonik);
+            zapisz_produkt(produkt.Nazwa, produkt.Weglowodany, produkt.Bialka, produkt.Tluszcze, produkt.Blonik);
+        }
+
+        private void zapisz_produkt(string nazwa, float weglo, float bialka, float tluszcze, float blonik)
+        {
+            DB_con conection = new DB_con();
+            SQLiteCommand sql_cmd2 = conection.Polacz();
+            sql_cmd2.CommandText = $"INSERT INTO Produkty (nazwa, weglowdany, bialka, tluszcze, blonnik) VALUES ('{nazwa}', {weglo}, {bialka}, {tluszcze}, {blonik});";
+            SQLiteDataReader kursor1 = sql_cmd2.ExecuteReader();
+            conection.Rozlacz();
         }
     }
 }

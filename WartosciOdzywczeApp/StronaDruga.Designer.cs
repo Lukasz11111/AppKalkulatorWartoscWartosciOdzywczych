@@ -28,12 +28,249 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.wprowadzProduktToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBoxNazwa = new System.Windows.Forms.TextBox();
+            this.textBoxWeglo = new System.Windows.Forms.TextBox();
+            this.textBoxBialka = new System.Windows.Forms.TextBox();
+            this.textBoxTluszcze = new System.Windows.Forms.TextBox();
+            this.textBoxBlonik = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.PaleGreen;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wprowadzProduktToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 10, 0, 2);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(240, 450);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // wprowadzProduktToolStripMenuItem
+            // 
+            this.wprowadzProduktToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
+            this.wprowadzProduktToolStripMenuItem.Name = "wprowadzProduktToolStripMenuItem";
+            this.wprowadzProduktToolStripMenuItem.Size = new System.Drawing.Size(223, 29);
+            this.wprowadzProduktToolStripMenuItem.Text = "Powrót";
+            this.wprowadzProduktToolStripMenuItem.Click += new System.EventHandler(this.wprowadzProduktToolStripMenuItem_Click);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel2.Controls.Add(this.label6);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel1);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel2.Controls.Add(this.button1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(287, 21);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(280, 322);
+            this.flowLayoutPanel2.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 300, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(181, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Wprowadz danne produktu na 100 g";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.textBoxNazwa);
+            this.flowLayoutPanel1.Controls.Add(this.textBoxWeglo);
+            this.flowLayoutPanel1.Controls.Add(this.textBoxBialka);
+            this.flowLayoutPanel1.Controls.Add(this.textBoxTluszcze);
+            this.flowLayoutPanel1.Controls.Add(this.textBoxBlonik);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 13);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(1, 1, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(171, 271);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // textBoxNazwa
+            // 
+            this.textBoxNazwa.Location = new System.Drawing.Point(4, 11);
+            this.textBoxNazwa.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.textBoxNazwa.Name = "textBoxNazwa";
+            this.textBoxNazwa.Size = new System.Drawing.Size(162, 20);
+            this.textBoxNazwa.TabIndex = 0;
+            // 
+            // textBoxWeglo
+            // 
+            this.textBoxWeglo.Location = new System.Drawing.Point(4, 44);
+            this.textBoxWeglo.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.textBoxWeglo.Name = "textBoxWeglo";
+            this.textBoxWeglo.Size = new System.Drawing.Size(57, 20);
+            this.textBoxWeglo.TabIndex = 1;
+            // 
+            // textBoxBialka
+            // 
+            this.textBoxBialka.Location = new System.Drawing.Point(4, 77);
+            this.textBoxBialka.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.textBoxBialka.Name = "textBoxBialka";
+            this.textBoxBialka.Size = new System.Drawing.Size(57, 20);
+            this.textBoxBialka.TabIndex = 2;
+            // 
+            // textBoxTluszcze
+            // 
+            this.textBoxTluszcze.Location = new System.Drawing.Point(4, 110);
+            this.textBoxTluszcze.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.textBoxTluszcze.Name = "textBoxTluszcze";
+            this.textBoxTluszcze.Size = new System.Drawing.Size(57, 20);
+            this.textBoxTluszcze.TabIndex = 3;
+            // 
+            // textBoxBlonik
+            // 
+            this.textBoxBlonik.Location = new System.Drawing.Point(4, 143);
+            this.textBoxBlonik.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.textBoxBlonik.Name = "textBoxBlonik";
+            this.textBoxBlonik.Size = new System.Drawing.Size(57, 20);
+            this.textBoxBlonik.TabIndex = 4;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label1);
+            this.flowLayoutPanel3.Controls.Add(this.label2);
+            this.flowLayoutPanel3.Controls.Add(this.label3);
+            this.flowLayoutPanel3.Controls.Add(this.label4);
+            this.flowLayoutPanel3.Controls.Add(this.label5);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(174, 16);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(93, 268);
+            this.flowLayoutPanel3.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 13, 3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nazwa";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Węglowodany";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 77);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 17, 3, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Białka";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 110);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 17, 3, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tłuszcze";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 143);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 17, 3, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Błonik";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 290);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Wprowadz";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // StronaDruga
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "StronaDruga";
+            this.BackColor = System.Drawing.Color.NavajoWhite;
+            this.ClientSize = new System.Drawing.Size(601, 450);
+            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.menuStrip1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "StronaDruga";
+            this.ShowIcon = false;
+            this.Text = "Kalkulator jedzenia";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StronaDruga_FormClosed);
+            this.Load += new System.EventHandler(this.StronaDruga_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem wprowadzProduktToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TextBox textBoxNazwa;
+        private System.Windows.Forms.TextBox textBoxWeglo;
+        private System.Windows.Forms.TextBox textBoxBialka;
+        private System.Windows.Forms.TextBox textBoxTluszcze;
+        private System.Windows.Forms.TextBox textBoxBlonik;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }
