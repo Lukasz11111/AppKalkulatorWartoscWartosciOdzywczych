@@ -69,6 +69,7 @@ namespace WartosciOdzywczeApp
         private  ComboBox combo_produkty()
         {
             List<Produkt> produkty_ = new List<Produkt>();
+
             foreach(Produkt produkt in produkty)
             {
                 produkty_.Add(produkt);
@@ -125,10 +126,14 @@ namespace WartosciOdzywczeApp
                 tluszcze += produkt.Tluszcze * mnoznik_produktu;
                 blonik += produkt.Blonik * mnoznik_produktu;
 
-                
-
             }
-            MessageBox.Show(weglo.ToString());
+            string podsumowanie = "Węglowodany: " + weglo.ToString() + " \n"
+                + "Białka: " + bialka.ToString() + " \n"
+                + "Tłuszcze: " + tluszcze.ToString() + " \n"
+                + "Blonnik: " + blonik.ToString() + " \n";
+
+            MessageBox.Show(podsumowanie);
+
 
         }
 
