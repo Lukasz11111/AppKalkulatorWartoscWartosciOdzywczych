@@ -68,9 +68,14 @@ namespace WartosciOdzywczeApp
         }
         private  ComboBox combo_produkty()
         {
+            List<Produkt> produkty_ = new List<Produkt>();
+            foreach(Produkt produkt in produkty)
+            {
+                produkty_.Add(produkt);
+            }
             ComboBox combo = new ComboBox();
             combo.Text = "Wybierz Produkt";
-            combo.DataSource = produkty;
+            combo.DataSource = produkty_;
             combo.DisplayMember = "nazwa";
             return combo;
         }
@@ -120,9 +125,10 @@ namespace WartosciOdzywczeApp
                 tluszcze += produkt.Tluszcze * mnoznik_produktu;
                 blonik += produkt.Blonik * mnoznik_produktu;
 
-                MessageBox.Show(weglo.ToString());
+                
 
             }
+            MessageBox.Show(weglo.ToString());
 
         }
 
