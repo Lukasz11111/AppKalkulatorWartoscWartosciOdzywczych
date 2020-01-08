@@ -35,6 +35,7 @@ namespace WartosciOdzywczeApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrWhiteSpace(textBoxNazwa.Text))
             try
             {
                 float weglo, bialka, tluszcze, blonik;
@@ -51,7 +52,8 @@ namespace WartosciOdzywczeApp
             catch
             {
                 MessageBox.Show("Nie udało się dodać produktu!");
-            }
+            }else
+            MessageBox.Show("Nie udało się dodać produktu!\n Nazwa nie może być pusta!");
         }
 
         private void zapisz_produkt(string nazwa, float weglo, float bialka, float tluszcze, float blonik)
@@ -61,6 +63,11 @@ namespace WartosciOdzywczeApp
             sql_cmd2.CommandText = $"INSERT INTO Produkty (nazwa, weglowdany, bialka, tluszcze, blonnik) VALUES ('{nazwa}', {weglo}, {bialka}, {tluszcze}, {blonik});";
             SQLiteDataReader kursor1 = sql_cmd2.ExecuteReader();
             conection.Rozlacz();
+        }
+
+        private void textBoxNazwa_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

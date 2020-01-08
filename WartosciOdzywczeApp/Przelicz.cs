@@ -78,6 +78,7 @@ namespace WartosciOdzywczeApp
             combo.Text = "Wybierz Produkt";
             combo.DataSource = produkty_;
             combo.DisplayMember = "nazwa";
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
             return combo;
         }
 
@@ -111,6 +112,7 @@ namespace WartosciOdzywczeApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            List<Produkt> produkty_lista = new List<Produkt>();
             float weglo = 0, bialka = 0, tluszcze = 0, blonik = 0, gramatura = 0;
 
             foreach (FlowLayoutPanel panel in panele_produktow)
@@ -121,19 +123,44 @@ namespace WartosciOdzywczeApp
                 mnoznik_produktu = gramatura_produktu / 100;
 
                 Produkt produkt = (panel.Controls[0] as ComboBox).SelectedItem as Produkt;
+
+                produkt.Weglowodany_rzeczywista_ilosc= produkt.Weglowodany * mnoznik_produktu;
+                produkt.Bialka_rzeczywista_ilosc = produkt.Bialka * mnoznik_produktu;
+                produkt.Tluszcze_rzeczywista_ilosc = produkt.Tluszcze * mnoznik_produktu;
+                produkt.Blonik_rzeczywista_ilosc = produkt.Blonik * mnoznik_produktu;
+
                 weglo += produkt.Weglowodany * mnoznik_produktu;
                 bialka += produkt.Bialka * mnoznik_produktu;
                 tluszcze += produkt.Tluszcze * mnoznik_produktu;
                 blonik += produkt.Blonik * mnoznik_produktu;
-
+                produkty_lista.Add(produkt);
             }
             string podsumowanie = "Węglowodany: " + weglo.ToString() + " \n"
                 + "Białka: " + bialka.ToString() + " \n"
                 + "Tłuszcze: " + tluszcze.ToString() + " \n"
-                + "Blonnik: " + blonik.ToString() + " \n";
+                + "Blonnik: " + blonik.ToString() + " \n" +
+                "Chcesz zobaczyć szczegóły?";
+            const string caption = "Form Closing";
+            var result = MessageBox.Show(podsumowanie, caption,
+                                MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Information);
 
-            MessageBox.Show(podsumowanie);
+            if (result == DialogResult.OK)
+            {
+                string message = "";
+                foreach(Produkt produkt in produkty_lista)
+                {
+                    message += $" {produkt.Nazwa}\n" +
+                        $"Weglowodany: {produkt.Weglowodany_rzeczywista_ilosc} g " +
+                        $"Białka: {produkt.Bialka_rzeczywista_ilosc} g " +
+                        $"Tłuszecze: {produkt.Tluszcze_rzeczywista_ilosc} g " +
+                        $"Błoniki: {produkt.Blonik_rzeczywista_ilosc} g\n\n";
+                }
+                MessageBox.Show(message, caption,
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.None);
 
+            }
 
         }
 
