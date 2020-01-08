@@ -11,7 +11,7 @@ namespace WartosciOdzywczeApp
 
         public string label_o_programie(){
 
-            return "Program służący do przeliczania \nzjedzonych wartości odżywczych.";
+            return "Program służący do przeliczania \nzjedzonych wartości odżywczych. Wykonał: \nŁukasz Miklas\nFilip Grochala";
             }
     }
 }
