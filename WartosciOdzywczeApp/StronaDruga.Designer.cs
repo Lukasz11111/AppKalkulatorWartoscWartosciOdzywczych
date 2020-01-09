@@ -234,7 +234,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(84, 290);
-            this.label7.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 8;
@@ -251,7 +251,7 @@
             this.MinimizeBox = false;
             this.Name = "StronaDruga";
             this.ShowIcon = false;
-            this.Text = "Kalkulator jedzenia";
+            this.Text = "Kalkulator wartości odżywczych";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StronaDruga_FormClosed);
             this.Load += new System.EventHandler(this.StronaDruga_Load);
             this.menuStrip1.ResumeLayout(false);

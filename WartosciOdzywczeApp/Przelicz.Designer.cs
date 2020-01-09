@@ -115,7 +115,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Przelicz";
-            this.Text = "Przelicz";
+            this.Text = "Kalkulator wartości odżywczych";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);

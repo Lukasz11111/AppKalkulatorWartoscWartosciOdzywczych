@@ -140,7 +140,7 @@ namespace WartosciOdzywczeApp
                 + "Tłuszcze: " + tluszcze.ToString() + " \n"
                 + "Blonnik: " + blonik.ToString() + " \n" +
                 "Chcesz zobaczyć szczegóły?";
-            const string caption = "Przelicznik";
+            const string caption = "Raport";
             var result = MessageBox.Show(podsumowanie, caption,
                                 MessageBoxButtons.OKCancel,
                                 MessageBoxIcon.Information);
@@ -156,7 +156,7 @@ namespace WartosciOdzywczeApp
                         $"Tłuszecze: {produkt.Tluszcze_rzeczywista_ilosc} g " +
                         $"Błoniki: {produkt.Blonik_rzeczywista_ilosc} g\n\n";
                 }
-                MessageBox.Show(message, "Szczegół",
+                MessageBox.Show(message, "Szczegóły",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.None);
 
