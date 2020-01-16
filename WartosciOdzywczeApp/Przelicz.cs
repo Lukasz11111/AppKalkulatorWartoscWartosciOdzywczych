@@ -19,13 +19,13 @@ namespace WartosciOdzywczeApp
         {
             InitializeComponent();
             flowLayoutPanel2.Controls.Add(button_add());
-            produkty =  lista_produktow();
+            produkty = lista_produktow();
             panele_produktow = new List<FlowLayoutPanel>();
         }
 
-      private  Button button_add()
+        private Button button_add()
         {
-            Button dodaj= new Button();
+            Button dodaj = new Button();
             dodaj.Size = new Size(40, 20);
             dodaj.Text = "ADD";
             dodaj.Click += new EventHandler(button_Click);
@@ -36,9 +36,9 @@ namespace WartosciOdzywczeApp
             Button button = sender as Button;
             flowLayoutPanel2.Controls.Add(panel_produktow());
             flowLayoutPanel2.Controls.Add(button_add());
-           button.Hide();
+            button.Hide();
         }
-     private   FlowLayoutPanel panel_produktow()
+        private FlowLayoutPanel panel_produktow()
         {
             FlowLayoutPanel panel = new FlowLayoutPanel();
             panel.Size = new Size(280, 30);
@@ -66,15 +66,16 @@ namespace WartosciOdzywczeApp
             return label;
 
         }
-        private  ComboBox combo_produkty()
+        private ComboBox combo_produkty()
         {
             List<Produkt> produkty_ = new List<Produkt>();
 
-            foreach(Produkt produkt in produkty)
+            foreach (Produkt produkt in produkty)
             {
                 produkty_.Add(produkt);
             }
             ComboBox combo = new ComboBox();
+
             combo.Text = "Wybierz Produkt";
             combo.DataSource = produkty_;
             combo.DisplayMember = "nazwa";
@@ -85,14 +86,14 @@ namespace WartosciOdzywczeApp
         private List<Produkt> lista_produktow()
         {
             List<Produkt> produkts = new List<Produkt>();
-               DB_con conection = new DB_con();
+            DB_con conection = new DB_con();
             SQLiteCommand sql_cmd2 = conection.Polacz();
             string nazwa = null;
             sql_cmd2.CommandText = "SELECT * FROM Produkty;";
             SQLiteDataReader kursor1 = sql_cmd2.ExecuteReader();
             while (kursor1.Read())
             {
-                Produkt produkt = new Produkt(kursor1.GetString(1),kursor1.GetFloat(2), kursor1.GetFloat(3), kursor1.GetFloat(4), kursor1.GetFloat(5));
+                Produkt produkt = new Produkt(kursor1.GetString(1), kursor1.GetFloat(2), kursor1.GetFloat(3), kursor1.GetFloat(4), kursor1.GetFloat(5), kursor1.GetFloat(6));
                 produkts.Add(produkt);
 
 
@@ -113,7 +114,7 @@ namespace WartosciOdzywczeApp
         private void button1_Click(object sender, EventArgs e)
         {
             List<Produkt> produkty_lista = new List<Produkt>();
-            float weglo = 0, bialka = 0, tluszcze = 0, blonik = 0, gramatura = 0;
+            float weglo = 0, bialka = 0, tluszcze = 0, blonik = 0, gramatura = 0, kalorie = 0;
 
             foreach (FlowLayoutPanel panel in panele_produktow)
             {
@@ -124,21 +125,25 @@ namespace WartosciOdzywczeApp
 
                 Produkt produkt = (panel.Controls[0] as ComboBox).SelectedItem as Produkt;
 
-                produkt.Weglowodany_rzeczywista_ilosc= produkt.Weglowodany * mnoznik_produktu;
+                produkt.Weglowodany_rzeczywista_ilosc = produkt.Weglowodany * mnoznik_produktu;
                 produkt.Bialka_rzeczywista_ilosc = produkt.Bialka * mnoznik_produktu;
                 produkt.Tluszcze_rzeczywista_ilosc = produkt.Tluszcze * mnoznik_produktu;
                 produkt.Blonik_rzeczywista_ilosc = produkt.Blonik * mnoznik_produktu;
+                produkt.Kalorie_rzeczywista_ilosc = produkt.Kalorie * mnoznik_produktu;
 
                 weglo += produkt.Weglowodany * mnoznik_produktu;
                 bialka += produkt.Bialka * mnoznik_produktu;
                 tluszcze += produkt.Tluszcze * mnoznik_produktu;
                 blonik += produkt.Blonik * mnoznik_produktu;
+                kalorie += produkt.Kalorie * mnoznik_produktu;
+
                 produkty_lista.Add(produkt);
             }
             string podsumowanie = "Węglowodany: " + weglo.ToString() + " \n"
                 + "Białka: " + bialka.ToString() + " \n"
                 + "Tłuszcze: " + tluszcze.ToString() + " \n"
-                + "Blonnik: " + blonik.ToString() + " \n" +
+                + "Blonnik: " + blonik.ToString() + " \n"
+                + "Kalorie: " + kalorie.ToString() + "\n" +
                 "Chcesz zobaczyć szczegóły?";
             const string caption = "Raport";
             var result = MessageBox.Show(podsumowanie, caption,
@@ -148,13 +153,15 @@ namespace WartosciOdzywczeApp
             if (result == DialogResult.OK)
             {
                 string message = "";
-                foreach(Produkt produkt in produkty_lista)
+                foreach (Produkt produkt in produkty_lista)
                 {
                     message += $" {produkt.Nazwa}\n" +
                         $"Weglowodany: {produkt.Weglowodany_rzeczywista_ilosc} g " +
                         $"Białka: {produkt.Bialka_rzeczywista_ilosc} g " +
                         $"Tłuszecze: {produkt.Tluszcze_rzeczywista_ilosc} g " +
-                        $"Błoniki: {produkt.Blonik_rzeczywista_ilosc} g\n\n";
+                        $"Błonik: {produkt.Blonik_rzeczywista_ilosc} g " +
+                        $"Kalorie: {produkt.Kalorie_rzeczywista_ilosc} kcal\n\n";
+
                 }
                 MessageBox.Show(message, "Szczegóły",
                                MessageBoxButtons.OK,
