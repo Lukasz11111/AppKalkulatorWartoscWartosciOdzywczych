@@ -30,30 +30,32 @@ namespace WartosciOdzywczeApp
 
         private void StronaDruga_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(textBoxNazwa.Text))
-            try
-            {
-                float weglo, bialka, tluszcze, blonik;
+                try
+                {
+                    float weglo, bialka, tluszcze, blonik, kalorie;
 
-                float.TryParse(textBoxWeglo.Text.Replace(',', '.'), out weglo);
-                float.TryParse(textBoxBialka.Text.Replace(',', '.'), out bialka);
-                float.TryParse(textBoxTluszcze.Text.Replace(',', '.'), out tluszcze);
-                float.TryParse(textBoxBlonik.Text.Replace(',', '.'), out blonik);
-                Produkt produkt = new Produkt(textBoxNazwa.Text, weglo, bialka, tluszcze, blonik);
-                zapisz_produkt(produkt.Nazwa, produkt.Weglowodany, produkt.Bialka, produkt.Tluszcze, produkt.Blonik);
-                label7.Text = "Udało się dodać produkt";
+                    float.TryParse(textBoxWeglo.Text.Replace(',', '.'), out weglo);
+                    float.TryParse(textBoxBialka.Text.Replace(',', '.'), out bialka);
+                    float.TryParse(textBoxTluszcze.Text.Replace(',', '.'), out tluszcze);
+                    float.TryParse(textBoxBlonik.Text.Replace(',', '.'), out blonik);
+                    float.TryParse(textBoxKalorie.Text.Replace(',', '.'), out kalorie);
+                    Produkt produkt = new Produkt(textBoxNazwa.Text, weglo, bialka, tluszcze, blonik, kalorie);
+                    zapisz_produkt(produkt.Nazwa, produkt.Weglowodany, produkt.Bialka, produkt.Tluszcze, produkt.Blonik);
+                    label7.Text = "Udało się dodać produkt";
 
-            }
-            catch
-            {
-                MessageBox.Show("Nie udało się dodać produktu!");
-            }else
-            MessageBox.Show("Nie udało się dodać produktu!\n Nazwa nie może być pusta!");
+                }
+                catch
+                {
+                    MessageBox.Show("Nie udało się dodać produktu!");
+                }
+            else
+                MessageBox.Show("Nie udało się dodać produktu!\n Nazwa nie może być pusta!");
         }
 
         private void zapisz_produkt(string nazwa, float weglo, float bialka, float tluszcze, float blonik)
