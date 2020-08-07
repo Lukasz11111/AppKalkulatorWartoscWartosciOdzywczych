@@ -1,0 +1,8 @@
+Repository.Port=42734;
+Repository.Address=192.168.1.9;
+Application.Name=WartosciOdzywczeApp;
+SolutionName=WartosciOdzywczeApp;
+ConnectivityType=OnEvent;
+AuthorizationToken=;
+Release=;
+BacklogSize=1000;

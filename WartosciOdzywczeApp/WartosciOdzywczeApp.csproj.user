@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+    <RevDeBugCompilerPath>c:\users\kaloryfer\appdata\local\microsoft\visualstudio\16.0_ee57660a\extensions\1bauet14.heq\tmcc\</RevDeBugCompilerPath>
+    <CustomAfterMicrosoftCommonTargets>c:\users\kaloryfer\appdata\local\microsoft\visualstudio\16.0_ee57660a\extensions\1bauet14.heq\tmcc\RevDeBug.ImportAfter.targets</CustomAfterMicrosoftCommonTargets>
+    <RevDeBugActive>True</RevDeBugActive>
+    <SaveMetadataAsync>true</SaveMetadataAsync>
+    <RevDeBugDisableNuget>true</RevDeBugDisableNuget>
+    <RevDeBugMetadataPath>C:\Users\Kaloryfer\OneDrive\Dokumenty\RevDeBug\WartosciOdzywczeApp\Metadata\\</RevDeBugMetadataPath>
+    <RevDeBugStateStorageType>Continuous</RevDeBugStateStorageType>
+    <PublishWithRevDeBug>true</PublishWithRevDeBug>
+    <RemoteRecorderAddress>192.168.1.9</RemoteRecorderAddress>
+    <RemoteRecorderTCPPort>42734</RemoteRecorderTCPPort>
+    <PublishMode>Observe</PublishMode>
+    <PublishWithRevDeBugConfiguration>Debug</PublishWithRevDeBugConfiguration>
+    <UseRevDeBugOnThisProject>true</UseRevDeBugOnThisProject>
+  </PropertyGroup>
+</Project>
